@@ -1,0 +1,109 @@
+.hero-content {
+    background:
+        linear-gradient(rgba(90, 62, 43, 0.7), rgba(90, 62, 43, 0.7)),
+        url('../img/bg-masthead.jpg');
+
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-color: #5a3e2b;
+    color: var(--light);
+
+
+}
+
+.btn {
+    background-color: var(--primary);
+    color: var(--light);
+    padding: 15px 30px;
+    border-radius: 60px;
+    transition: background-color 0.3s ease;
+    font-weight: 700;
+
+}
+
+.btn:hover {
+    background-color: var(--primary-dark);
+}
+
+
+.light-btn {
+    background-color: var(--light);
+    color: var(--dark);
+    padding: 15px 30px;
+    border-radius: 60px;
+    transition: background-color 0.3s ease;
+    font-weight: 700;
+
+}
+
+.light-btn:hover {
+    background-color: var(--secondary);
+    color: var(--light);
+}
+
+.card {
+    width: 100%;
+    padding: 50px;
+    height: 15vh;
+}
+
+.nav{
+    width: 100%;
+    z-index: 10;
+    color: var(--light);
+    position: fixed;
+    top: 0;
+    animation: scroll-transition;
+    animation-timeline:scroll(y);
+}
+@keyframes scroll-transition {
+    0.1% , 100%{
+        background-color: var(--light);
+        color: var(--dark);
+    }
+}
+
+.nav a:hover{
+color: var(--primary);
+}
+
+.collection {
+    position: relative;
+}
+.collection-details {
+    position: absolute;
+    inset: 0;
+    z-index: 9;
+    background-color: rgba(255, 99, 2, 0.858);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: var(--light);
+}
+
+.collection:hover .collection-details {
+    opacity: 1;
+}
+
+
+.grid-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .grid-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .grid-row {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
