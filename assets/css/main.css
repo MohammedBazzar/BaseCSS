@@ -67,7 +67,10 @@
 .nav a:hover{
 color: var(--primary);
 }
-
+.nav img{
+    width: 30px;
+    display: none;
+}
 .collection {
     position: relative;
 }
@@ -98,7 +101,7 @@ color: var(--primary);
 
 @media (min-width: 768px) {
     .grid-row {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
@@ -106,4 +109,13 @@ color: var(--primary);
     .grid-row {
         grid-template-columns: repeat(4, 1fr);
     }
+}
+
+@media (width < 992px) {
+    .links{
+        display: none;
+    }
+    .nav img{
+    display: block;
+}
 }
