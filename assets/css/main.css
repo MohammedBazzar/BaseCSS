@@ -139,3 +139,12 @@ color: var(--primary);
         display: block;
 }
 }
+
+.text-input {
+    padding: 10px;
+    border: 1px solid var(--secondary);
+    border-radius: 5px;
+    width: 100%;
+    max-width: 600px;
+    min-width: 200px;
+}
