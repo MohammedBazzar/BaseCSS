@@ -44,11 +44,10 @@
 
 .card {
     width: 100%;
-    padding: 50px;
-    height: 15vh;
+    padding: 50px;    
 }
 
-.nav{
+.my_nav{
     width: 100%;
     z-index: 10;
     color: var(--light);
@@ -64,12 +63,19 @@
     }
 }
 
-.nav a:hover{
+.my_nav a:hover{
 color: var(--primary);
 }
-.nav img{
+.my_nav img{
     width: 30px;
     display: none;
+}
+.nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 .collection {
     position: relative;
@@ -98,11 +104,20 @@ color: var(--primary);
     grid-template-columns: 1fr;
     gap: 20px;
 }
+@media(width < 767px){
+    .hero-content h1{
+        font-size: 24px;
+    }
+    .aboutsec h2, .servicessec h2 {
+        font-size: 20px;
+    }
 
+}
 @media (min-width: 768px) {
     .grid-row {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
+    
 }
 
 @media (min-width: 992px) {
@@ -115,7 +130,12 @@ color: var(--primary);
     .links{
         display: none;
     }
-    .nav img{
-    display: block;
+    .nav{
+        width: 100%;
+        justify-content: space-between;
+    }
+        
+    .my_nav .burger_menu img{
+        display: block;
 }
 }
